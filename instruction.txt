@@ -1,0 +1,73 @@
+1. Создаём директорию проекта
+2. Создаём виртуальное окружение (python3 -m venv venv)
+3. Создаём файл requirements.txt и записываем туда наши библиотеки
+4. Активировать виртуальное окружение (. /venv/bin/activate)
+5. Установить зависимости с файла requirements.txt (pip3 install -r requirements.txt)
+6. Settings -> Project -> нажимаем на шестерёнку -> путь до нашего bin файла
+7. Начало django-admin startproject <название проекта> .
+8. Запуск проекта -> python3 manage.py runserver
+9. Запись таблицы в базу данных:
+    -> python3 manage.py makemigrations (создаёт файлы для миграции)
+    -> python3 manage.py migrate (записывает файлы миграции в базу данных)
+10. создание приложения django-admin startapp <app_name>
+
+
+
+
+
+
+
+Queryset -> Запрос в базу данных
+
+.all() -> Возвращает все записи
+
+
+Product.objects.all() -> SELECT * FROM products
+
+
+Product.objects.values() -> Возвращает значение в виде словаря
+
+Product.objects.values_list() -> Возвращает значение в виде списка
+
+
+
+
+
+
+
+
+MVC
+
+M - Model
+
+V - View(serializers)
+
+C - Controller(views)
+
+
+
+
+REST -> Архитектурный стиль написания API приложений
+1. Модель клиент сервер
+2. Единобразие интерфейса 
+3. Определение ресурсов(
+    URL (api/v1/products/1/)
+)
+
+djangorestframework 
+
+
+
+
+CRUD -> POST, GET, PATCH, PUT, DELETE
+C - Create -> POST
+R - Read -> GET
+U - Update -> PATCH, PUT
+D - Delete -> DELETE
+
+
+Для логина используется аутентификация:
+    1. Token(fasfdw32UOH98fvh2oqfhd90)
+    2. Session()
+    3. JWT(JSON-web token)(43erfjkj0fodsakJJKjfwf)
+    4. Base(Обычная аутентификация)
